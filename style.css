@@ -1,0 +1,112 @@
+/* Fundo */
+body {
+    margin: 0;
+    padding: 0;
+    background: url("fundo.png") center/cover fixed;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Centralizar tudo */
+.container {
+    text-align: center;
+    margin-top: 30px;
+}
+
+/* Logo */
+.logo {
+    width: 180px;
+    height: auto;
+    display: block;
+    margin: 0 auto 10px;
+}
+
+/* Título */
+h1 {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.titulo-opcoes {
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+}
+
+/* Botões */
+.btn {
+    display: block;
+    width: 350px;
+    margin: 12px auto;
+    padding: 15px;
+    text-decoration: none;
+    text-align: center;
+    background: #ff7aa8;
+    color: white;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    box-shadow: 0 5px 15px rgba(255, 0, 90, 0.3);
+    transition: 0.2s;
+
+    /* ADICIONE ISSO 👇 */
+    box-sizing: border-box;
+}
+
+
+.btn:hover {
+    transform: scale(1.05);
+    background: #ff4f90;
+}
+
+/* POPUP */
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(5px);
+    background: rgba(0, 0, 0, 0.4);
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-content {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    width: 300px;
+    text-align: center;
+    animation: abrir 0.3s ease;
+}
+
+@keyframes abrir {
+    from { transform: scale(0.8); opacity: 0; }
+    to   { transform: scale(1); opacity: 1; }
+}
+
+.precos {
+    list-style: none;
+    padding: 0;
+    font-size: 20px;
+}
+
+.precos li {
+    margin: 10px 0;
+    font-weight: bold;   /* deixa os itens da lista em negrito */
+}
+
+
+.fechar {
+    margin-top: 15px;
+    padding: 10px 20px;
+    background: #ff4f90;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+}

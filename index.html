@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Menu | Unhas da Nathy</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+    <div class="container">
+        <img src="nathynails.png" alt="Logo da Nail Designer" class="logo">
+
+        <h1>Nathalia Calo Nails</h1>
+        <h2 class="titulo-opcoes">Escolha a opção</h2>
+
+        <a href="https://wa.me/5511949333889" class="btn">Agendar Horário</a>
+        <a href="https://www.instagram.com/nathaliacalo_nails" class="btn">Instagram</a>
+        <a href="https://www.google.com/maps/place/Jardim+Belval,+Barueri" class="btn">Localização</a>
+        
+        <!-- BOTÃO QUE ABRE A TABELA -->
+        <button class="btn" id="btnTabela">Tabela de Preços</button>
+    </div>
+
+
+    <!-- POPUP DA TABELA DE PREÇOS -->
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <h2>Tabela de Preços</h2>
+
+            <ul class="precos">
+                <li>Mão —    <strong>R$ 30,00</strong></li>
+                <li>Pé —     <strong>R$ 35,00</strong></li>
+                <li>Pé + Mão — <strong>R$ 60,00</strong></li>
+            </ul>
+
+            <button id="fecharPopup" class="fechar">Fechar</button>
+        </div>
+    </div>
+
+    <script>
+        const abrir = document.getElementById("btnTabela");
+        const popup = document.getElementById("popup");
+        const fechar = document.getElementById("fecharPopup");
+
+        abrir.addEventListener("click", () => {
+            popup.style.display = "flex";
+        });
+
+        fechar.addEventListener("click", () => {
+            popup.style.display = "none";
+        });
+    </script>
+
+</body>
+</html>
